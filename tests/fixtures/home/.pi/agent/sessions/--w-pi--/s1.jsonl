@@ -1,0 +1,5 @@
+{"type":"session","version":3,"id":"p1","timestamp":"2026-08-02T09:00:00.000Z","cwd":"/w/pi"}
+{"type":"model_change","id":"m1","timestamp":"2026-08-02T09:00:01.000Z","modelId":"x"}
+{"type":"message","id":"a1","timestamp":"2026-08-02T09:01:00.000Z","message":{"role":"assistant","content":[{"type":"text","text":"Use sqlite or postgres?"}]}}
+{"type":"message","id":"r1","timestamp":"2026-08-02T09:02:00.000Z","message":{"role":"toolResult","content":[{"type":"text","text":"tool result text"}]}}
+{"type":"message","id":"u1","timestamp":"2026-08-02T09:03:00.000Z","message":{"role":"user","content":[{"type":"text","text":"postgres"}]}}

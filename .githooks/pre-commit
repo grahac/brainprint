@@ -1,0 +1,16 @@
+#!/bin/sh
+# brainprint pre-commit guard (spec §10, R12): per-user data never enters the
+# engine tree. Rejects staged paths under private/, brain/ or scratch/ (at any
+# depth), *.db files, and pairs*.jsonl files.
+#
+# Enable once per clone:  git config core.hooksPath .githooks
+
+bad=$(git diff --cached --name-only --diff-filter=ACMR | grep -E \
+  '(^|/)(private|brain|scratch)/|\.db$|(^|/)pairs[^/]*\.jsonl$')
+
+if [ -n "$bad" ]; then
+  echo "pre-commit: refusing to commit per-user data (spec §10):" >&2
+  echo "$bad" | sed 's/^/  /' >&2
+  exit 1
+fi
+exit 0

@@ -1,0 +1,8 @@
+# Per-user data: never in the engine tree (spec §10).
+private/
+brain/
+scratch/
+*.db
+pairs*.jsonl
+__pycache__/
+.DS_Store

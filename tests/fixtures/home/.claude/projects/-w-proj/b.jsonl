@@ -1,0 +1,4 @@
+{"type":"assistant","isSidechain":false,"cwd":"/w/proj","timestamp":"2026-08-01T10:02:00.000Z","message":{"role":"assistant","content":[{"type":"text","text":"Run the migration now or wait for review?"}]}}
+{"type":"user","isSidechain":false,"cwd":"/w/proj","timestamp":"2026-08-01T10:06:00.000Z","message":{"role":"user","content":"wait for review"}}
+{"type":"assistant","isSidechain":false,"cwd":"/w/proj","timestamp":"2026-08-01T11:00:00.000Z","message":{"role":"assistant","content":[{"type":"text","text":"Review done. Merge?"}]}}
+{"type":"user","isSidechain":false,"cwd":"/w/proj","timestamp":"2026-08-01T11:01:00.000Z","message":{"role":"user","content":[{"type":"text","text":"merge it"}]}}

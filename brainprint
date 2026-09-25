@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+"""brainprint: init | score | refresh."""
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from pipeline import init  # noqa: E402
+
+sys.exit(init.main(sys.argv[1:]))

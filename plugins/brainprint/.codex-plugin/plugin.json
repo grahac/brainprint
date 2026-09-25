@@ -1,0 +1,19 @@
+{
+  "name": "brainprint",
+  "version": "0.1.0",
+  "description": "Adds lightweight recommendations from {{owner's}} generated brain when meaningful choices arise.",
+  "author": {
+    "name": "brainprint"
+  },
+  "interface": {
+    "displayName": "{{owner's}} brain advisory",
+    "shortDescription": "Recommend from {{owner's}} preferences without acting.",
+    "longDescription": "Adds a compact advisory instruction to each session. When a meaningful product or technical fork appears, the agent gives one recommendation grounded in {{owner's}} generated brain. Recommendations never grant authority or trigger actions.",
+    "developerName": "brainprint",
+    "category": "Productivity",
+    "capabilities": [
+      "Read"
+    ],
+    "defaultPrompt": "Give me a recommendation using {{owner's}} brain."
+  }
+}

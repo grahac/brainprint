@@ -1,0 +1,17 @@
+{
+  "name": "brainprint",
+  "version": "0.1.0",
+  "description": "Adds lightweight recommendations from {{owner's}} generated brain when meaningful choices arise.",
+  "author": {
+    "name": "brainprint"
+  },
+  "keywords": [
+    "advisory",
+    "decisions",
+    "recommendations"
+  ],
+  "interface": {
+    "displayName": "{{owner's}} brain advisory",
+    "defaultPrompt": "Give me a recommendation using {{owner's}} brain."
+  }
+}

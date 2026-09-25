@@ -1,0 +1,9 @@
+{"type":"user","isSidechain":false,"cwd":"/w/proj","timestamp":"2026-08-01T10:00:00.000Z","message":{"role":"user","content":"start the migration"}}
+{"type":"assistant","isSidechain":false,"cwd":"/w/proj","timestamp":"2026-08-01T10:01:00.000Z","message":{"role":"assistant","content":[{"type":"text","text":"Draft plan ready."}]}}
+{"type":"assistant","isSidechain":false,"cwd":"/w/proj","timestamp":"2026-08-01T10:02:00.000Z","message":{"role":"assistant","content":[{"type":"text","text":"Run the migration now or wait for review?"},{"type":"tool_use","id":"t1","name":"Bash","input":{"command":"ls"}}]}}
+{"type":"user","isSidechain":false,"cwd":"/w/proj","timestamp":"2026-08-01T10:03:00.000Z","message":{"role":"user","content":[{"type":"tool_result","tool_use_id":"t1","content":"tool output text"}]}}
+{"type":"user","isSidechain":false,"cwd":"/w/proj","timestamp":"2026-08-01T10:04:00.000Z","message":{"role":"user","content":"<system-reminder>context reminder</system-reminder>"}}
+{"type":"assistant","isSidechain":true,"cwd":"/w/proj","timestamp":"2026-08-01T10:05:00.000Z","message":{"role":"assistant","content":[{"type":"text","text":"subagent question?"}]}}
+{"type":"user","isSidechain":true,"cwd":"/w/proj","timestamp":"2026-08-01T10:05:30.000Z","message":{"role":"user","content":"sidechain reply"}}
+not json, a torn line
+{"type":"user","isSidechain":false,"cwd":"/w/proj","timestamp":"2026-08-01T10:06:00.000Z","message":{"role":"user","content":"wait for review"}}
