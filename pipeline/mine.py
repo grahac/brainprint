@@ -46,7 +46,7 @@ CHOICE_PROMPT = (
     "answered these choices. Output only the notes in Markdown.\n\n")
 CHOICE_TURN_CHARS, CHOICE_REPLY_CHARS = 1500, 1000
 CHOICES = "choices.md"
-PAGE_CANDIDATES = 3  # DeepSeek writes this many pages; score.choose installs the best one
+PAGE_CANDIDATES = 3  # the miner writes this many pages; score.choose installs the best one
 
 
 def section_prompt(owner, notes):
