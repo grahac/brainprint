@@ -149,12 +149,16 @@ def run(cfg, runner, holdout_pairs=None, min_decisions=MIN_DECISIONS):
 def choose_installed(cfg, runner, min_decisions=MIN_DECISIONS):
     """Install the installed brain's best candidate page, chosen on half A of the held-out
     decisions. The installed brain has seen those sessions, so this only picks a page; the
-    reported score comes from the held-out brain. Returns the chosen name, or None."""
+    reported score comes from the held-out brain. Returns the chosen name, or None.
+
+    The gate counts every decision, the same as the score's: half A is a hash split, so gating on
+    its size would decline to choose on data the score just chose a page from."""
     out_dir = Path(cfg["brain_dir"]) / "brain"
     path = Path(cfg["private_dir"]) / decisions.DECISIONS_FILE
     rows = sessions.read_pairs(path) if path.is_file() else []
-    a, _ = halves(decisions.cases(rows))
-    if len(mine.page_candidates(out_dir)) < 2 or len(a) < min_decisions // 2:
+    cases = decisions.cases(rows)
+    a, _ = halves(cases)
+    if len(mine.page_candidates(out_dir)) < 2 or len(cases) < min_decisions:
         print("installed page: the first candidate (too few recent decisions to choose between pages)")
         return None
     chosen, scores = choose(a, cfg["owner_name"], out_dir, runner, lambda: sessions.write_pairs(path, rows))
