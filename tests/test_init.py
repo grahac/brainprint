@@ -126,6 +126,7 @@ class InitTest(unittest.TestCase):
         self.assertEqual(0, saved["n"])
         self.assertNotIn("accuracy", saved)
         self.assertIn("not enough recent decisions to score yet (found 0)", out)
+        self.assertIn("installed page: the first candidate (too few recent decisions to choose between pages)", out)
         self.assertIn("codex 1", out)
         self.assertIn("claude_code 2", out)
         self.assertIn("pi 1", out)
